@@ -138,8 +138,8 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'testmailiteen2@gmail.com'  # адрес электронной почты, с которого будет осуществляться рассылка
-EMAIL_HOST_PASSWORD = 'vltuusulgcmtahhp'  # пароль к вышеуказанному адресу электронной почты
+EMAIL_HOST_USER = 'enteryouremail'  # адрес электронной почты, с которого будет осуществляться рассылка
+EMAIL_HOST_PASSWORD = 'enteryourpassword'  # пароль к вышеуказанному адресу электронной почты
 EMAIL_PORT = 587
 
 DJOSER = {
