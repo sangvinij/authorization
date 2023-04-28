@@ -9,7 +9,6 @@
     - poetry shell (https://python-poetry.org/docs/ - документация по poetry)
     - poetry update
     - cd authentication
-    - python manage.py makemigrations
     - python manage.py migrate
     - python manage.py runserver
 
