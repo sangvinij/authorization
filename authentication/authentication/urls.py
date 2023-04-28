@@ -5,4 +5,3 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
-
