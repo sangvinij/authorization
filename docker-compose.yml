@@ -15,12 +15,9 @@ services:
       - iteen
     ports:
       - "8000:8000"
-    tmpfs:
-      - /app/.local/:mode=777,size=10m,uid=9999,gid=9999
     volumes:
       - ./:/app/:ro
 networks:
   iteen:
     name: iteen.network
     driver: bridge
-    
