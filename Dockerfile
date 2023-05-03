@@ -1,19 +1,24 @@
 FROM python:3.11
 
-# Обновляем pip до последней версии
+# Upgrading pip to the latesr version
 RUN python -m pip install --upgrade pip
 
-# Устанавливаем Poetry
+# Installing Poetry
 RUN pip install poetry
 
-# Копируем файлы проекта
-COPY . /authorization 
-
-# Устанавливаем зависимости
+# Copy pyproject.toml and poetry.lock to install dependencies
 WORKDIR /authorization
+COPY pyproject.toml poetry.lock ./
+
+# Installing dependencies
 RUN poetry config virtualenvs.create false && \
     poetry install --no-root --no-interaction
 
-# Запускаем миграции и сервер
-CMD poetry run python authentication/manage.py migrate && \
-    poetry run python authentication/manage.py runserver 127.0.0.1:8000
+# Сopy the remaining files
+COPY . .
+
+# Runing the file as an executable script
+RUN chmod +x entrypoint.sh
+
+# Runing commands from entrypoint.sh
+ENTRYPOINT [ "./entrypoint.sh" ]

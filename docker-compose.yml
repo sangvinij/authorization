@@ -9,12 +9,6 @@ services:
         - VERSION=${WEBAPP_VERSION:-dev}
       context: .
     container_name: webapp
-    entrypoint:
-      - sh
-      - -c
-      - |
-        python authentication/manage.py migrate 
-        python authentication/manage.py runserver
     image: webapp:latest
     networks:
       - iteen
