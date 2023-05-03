@@ -9,7 +9,6 @@ services:
         - VERSION=${WEBAPP_VERSION:-dev}
       context: .
     container_name: webapp
-    entrypoint: [ python, --version ]
     image: webapp:latest
     networks:
       - iteen
