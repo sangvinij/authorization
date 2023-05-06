@@ -29,5 +29,5 @@ USER newuser
 ENTRYPOINT [ "./entrypoint.sh" ]
 
 # Checking health status
-HEALTHCHECK --interval=2s --timeout=10s --start-period=2s --retries=2 \
-  CMD curl -f http://localhost:8000/asd || exit 1
+HEALTHCHECK --interval=3s --timeout=10s --start-period=2s --retries=5 \
+  CMD curl -f http://localhost:8000/ || exit 1
