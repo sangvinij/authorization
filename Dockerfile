@@ -20,7 +20,8 @@ RUN poetry config virtualenvs.create false && \
 COPY . .
 
 # Runing the file as an executable script
-RUN chmod +x entrypoint.sh
+RUN chmod +x entrypoint.sh && \
+    python authentication/manage.py migrate
 
 # Changing user 
 USER newuser
