@@ -135,5 +135,5 @@ dmypy.json
 /client/cache/
 /server/cafe/media/
 /book/media/
-!/data/
-!/pgadmin/
+data
+pgadmin
