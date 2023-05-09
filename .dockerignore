@@ -21,9 +21,6 @@ __pycache__/
 *.pyd
 *.db
 *.sqlite3
-*.pyc
-*.pyo
-*.pyd
 *.log
 *.swp
 *.swo
@@ -33,3 +30,5 @@ __pycache__/
 *.bak
 *.dump
 *.sql
+data/
+pgadmin/
