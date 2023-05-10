@@ -16,6 +16,7 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
     volumes:
       - .local/data:/var/lib/postgresql/data
+    init: true
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U admin -d testbase"]
       interval: 5s
