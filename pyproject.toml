@@ -10,9 +10,26 @@ python = "^3.10"
 django = "^4.2"
 djangorestframework = "^3.14.0"
 djoser = "^2.2.0"
+dj-database-url = "^2.0.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.6"
 flake8 = "^6.0.0"
+flake8-quotes = "^3.3.2"
+flake8-builtins = "^2.1.0"
+flake8-import-order = "^0.18.2"
+pyproject-flake8 = "^6.0.0.post1"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+    exclude = [
+        ".venv",
+        "./authentication/*/migrations/"
+    ]
+    max-line-length = 120
+    per-file-ignores = """
+        ./authentication/manage.py: Q000
+    """
